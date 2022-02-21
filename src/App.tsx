@@ -1,13 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 let a: number | null = 10
 const name: string = 'Mambo'
 let isMambo: boolean = true
 
-const names: Array <string|number>  = ["Mambo", "Not Mambo", "Mambo's friend", 0]
-const names2: string []  = ["Mambo", "Not Mambo", "Mambo's friend"]
+const names: Array<string | number> = ["Mambo", "Not Mambo", "Mambo's friend", 0]
+const names2: string[] = ["Mambo", "Not Mambo", "Mambo's friend"]
 // alert(names2[0].toUpperCase())
 
 // our custom type by string
@@ -19,7 +17,7 @@ const man: manSex = 'male'
 const woman: manSex = 'female'
 
 type UserType = {
-  sayMyName?: Function
+  sayMyName: Function
   sayHello?: (message: string) => void
   name: string
   age: number
@@ -28,40 +26,37 @@ type UserType = {
 }
 
 type AddressType = {
-  city: string
   // ? = not necessary property
   country?: string
+  city: string
+
 }
 
-const user:UserType = {
-  sayMyName(message: string) {alert('MAMBO')},
+const user: UserType = {
+  sayMyName(message: string) { alert(this.name) },
   name: 'Carlos',
   age: 35,
   isMambo: false,
   adress: {
     city: 'Varo',
-    // country: 'Varondo'
   }
 }
 
 
-
 // we must give type to param, or at least default arguments
 // type any give any type - often used when we do refactoring step by step
-const summ: Function = (a = 10, b:number, c: any) => {
+const summ: Function = (a = 10, b: number, c: any) => {
   return a + b
 }
 
-const summ2: (a:number, b: number) => number = (a = 10, b:number) => {
+const summ2: (a: number, b: number) => number = (a = 10, b: number) => {
   return a + b
 }
 
-type SummType = (a: number, b: number) => number; 
-
+type SummType = (a: number, b: number) => number;
 const summ3: SummType = (a, b) => {
   return a + b
 }
-
 
 
 const initialState = {
@@ -72,11 +67,11 @@ const initialState = {
 }
 export type initialStateType = typeof initialState
 
-let state2: initialStateType = {
+const state2: initialStateType = {
   a: null,
   b: 'rogota',
   c: false,
-  adresses: [{city:'faf', country:'sads'}]
+  adresses: [{ city: 'faf', country: 'sads' }]
 }
 
 
@@ -92,17 +87,10 @@ const action: GetTasksActionType = {
 }
 
 
-
-
-
-
-
-
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
