@@ -15,6 +15,7 @@ sex = 'female'
 type manSex = 'male' | 'female' | 'not sure'
 const man: manSex = 'male'
 const woman: manSex = 'female'
+const notSure: manSex = 'not sure'
 
 type UserType = {
   sayMyName: Function
