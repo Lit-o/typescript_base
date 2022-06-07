@@ -1,19 +1,19 @@
 let bbb = 15;
-bbb = 'not a num'
+// bbb = 'not a num'
 
 
 let newB: number | 'not a num' = 12;
 newB = 'not a num';
-newB = newB + 2
+// newB = newB + 2
 
 
 let isItReal = true as boolean | null
-isItReal = 15;
+// isItReal = 15;
 
 
 const MamboNames: Array<string | number> = ['Mambonito', 'MambS', 15]
 const MamboNamesAgain: (string | number)[] = ['Mambonito', 'MambS', 15]
-const MamboNamesWithoutNum: string [] = ['Mambonito', 'MambS', 15]
+// const MamboNamesWithoutNum: string [] = ['Mambonito', 'MambS', 15]
 
 
 let lookingGood: 'yep' | 'nope' | 'pretty fine' 
